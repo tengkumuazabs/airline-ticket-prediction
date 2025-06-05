@@ -33,8 +33,6 @@ docker build -t airline-price-app .
 docker run -d -p 8000:8000 airline-price-app
 ```
 
-Visit: http://localhost:8000
-
 ## 📊 User Inputs
 - 📝 Airline (e.g., Air India, IndiGo, Jet Airways)
 - 📝 Departure City & Time
