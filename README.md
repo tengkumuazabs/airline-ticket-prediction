@@ -15,7 +15,7 @@ A web-based machine learning app built with **FastAPI** to predict airline ticke
 ### 1. Clone the Repository
 
 ```bash
-git https://github.com/tengkumuazabs/airline-ticket-prediction.git
+git clone https://github.com/tengkumuazabs/airline-ticket-prediction.git
 cd airline-ticket-prediction
 ```
 ### 2. Create `.env` File
