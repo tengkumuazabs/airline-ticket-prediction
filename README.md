@@ -25,8 +25,8 @@ echo "MODEL_PATH=model.joblib" > .env
 
 ### 3. Build and Run with Docker
 ```bash
-docker build -t airline-price-app .
-docker run -d -p 8000:8000 airline-price-app
+docker build -t airline-ticket-prediction-fastapi .
+docker run -d -p 8000:8000 airline-ticket-prediction-fastapi
 ```
 
 ## 📊 User Inputs
