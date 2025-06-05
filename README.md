@@ -2,8 +2,6 @@
 
 A web-based machine learning app built with **FastAPI** to predict airline ticket prices based on user inputs like airline, route, time, and stops.
 
----
-
 ## 🔧 Features
 
 - 🧠 Real-time ML model predictions  
@@ -11,8 +9,6 @@ A web-based machine learning app built with **FastAPI** to predict airline ticke
 - 🗂️ Organized file structure with **static assets**  
 - 📦 Docker support for deployment  
 - 🔐 Environment-based config via `.env`  
-
----
 
 ## 🚀 Getting Started
 
