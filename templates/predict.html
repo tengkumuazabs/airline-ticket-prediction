@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>airline_ticket_predition</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='assets/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='assets/css/Banner-Heading-Image-images.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='assets/css/styles.css') }}">
+</head>
+
+<body>
+    <section>
+        <div class="container index-container">
+            <div>
+                <div class="row g-0 d-lg-flex justify-content-center justify-content-lg-center">
+                    <div class="col-8 col-sm-4">
+                        <div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="d-flex align-items-end predict-banner">
+                                        <h1 class="predict-banner-heading">Predict<br>Ticket Price</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <form action="/predict" method="post">
+                                <div class="row form-row">
+                                    <div class="col">
+                                        <div class="form-question"><span>Select Airline</span>
+                                            <div class="form-line"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-check"><input class="form-check-input" type="radio" name="airline" value="Air Asia" required=""><label class="form-check-label">Air Asia</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" name="airline" value="Air India"><label class="form-check-label">Air India</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" name="airline" value="Go Air"><label class="form-check-label">GoAir</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" name="airline" value="IndiGo"><label class="form-check-label">IndiGo</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" name="airline" value="Jet Airways"><label class="form-check-label">Jet Airways</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" name="airline" value="Multiple carriers"><label class="form-check-label">Multiple carriers</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" name="airline" value="SpiceJet"><label class="form-check-label">SpiceJet</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" name="airline" value="Vistara"><label class="form-check-label">Vistara</label></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form-row">
+                                    <div class="col">
+                                        <div class="form-question"><span>Select Departure City</span>
+                                            <div class="form-line"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-check"><input class="form-check-input" type="radio" name="departure_city" value="Banglore" required=""><label class="form-check-label">Banglore</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" name="departure_city" value="Chennai"><label class="form-check-label">Chennai</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" name="departure_city" value="Delhi"><label class="form-check-label">Delhi</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" name="departure_city" value="Kolkata"><label class="form-check-label">Kolkata</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" name="departure_city" value="Mumbai"><label class="form-check-label">Mumbai</label></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form-row">
+                                    <div class="col">
+                                        <div class="form-question"><span>Select Departure Time</span>
+                                            <div class="form-line"></div>
+                                        </div>
+                                        <div class="row d-inline-flex row-select">
+                                            <div class="col"><select class="form-select" name="dep_hour" required="">
+                                                    {% for hour in range(0, 24) %}
+                                                        <option value="{{ '%02d' % hour }}">{{ '%02d' % hour }}</option>
+                                                    {% endfor %}
+                                                </select></div>
+                                            <div class="col col-time"><span>:</span></div>
+                                            <div class="col"><select class="form-select" name="dep_minute" required="">
+                                                    {% for minute in range(0, 60) %}
+                                                        <option value="{{ '%02d' % minute }}">{{ '%02d' % minute }}</option>
+                                                    {% endfor %}
+                                                </select></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form-row">
+                                    <div class="col">
+                                        <div class="form-question"><span>Select Arrival City</span>
+                                            <div class="form-line"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-check"><input class="form-check-input" type="radio" name="arrival_city" value="Banglore" required=""><label class="form-check-label">Banglore</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" name="arrival_city" value="Cochin"><label class="form-check-label">Cochin</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" name="arrival_city" value="Delhi"><label class="form-check-label">Delhi</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" name="arrival_city" value="Hyderabad"><label class="form-check-label">Hyderabad</label></div>
+                                                <div class="form-check"><input class="form-check-input" type="radio" name="arrival_city" value="Kolkata"><label class="form-check-label">Kolkata</label></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form-row">
+                                    <div class="col">
+                                        <div class="form-question"><span>Select Arrival Time</span>
+                                            <div class="form-line"></div>
+                                        </div>
+                                        <div class="row d-inline-flex row-select">
+                                            <div class="col"><select class="form-select" name="arrival_hour" required="">
+                                                    {% for hour in range(0, 23) %}
+                                                        <option value="{{ '%02d' % hour }}">{{ '%02d' % hour }}</option>
+                                                    {% endfor %}
+                                                </select></div>
+                                            <div class="col col-time"><span>:</span></div>
+                                            <div class="col"><select class="form-select" name="arrival_minute" required="">
+                                                    {% for minute in range(0, 60) %}
+                                                        <option value="{{ '%02d' % minute }}">{{ '%02d' % minute }}</option>
+                                                    {% endfor %}
+                                                </select></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form-row">
+                                    <div class="col">
+                                        <div class="form-question"><span>Select Total Stop(s)</span>
+                                            <div class="form-line"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-3" name="stops" value="0" required=""><label class="form-check-label" for="formCheck-3">0</label></div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-8" name="stops" value="1"><label class="form-check-label" for="formCheck-8">1</label></div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-10" name="stops" value="2"><label class="form-check-label" for="formCheck-10">2</label></div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-9" name="stops" value="3"><label class="form-check-label" for="formCheck-9">3</label></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form-row">
+                                    <div class="col"><button class="btn btn-primary btn-lg" type="submit" style="width: 100%;">Predict</button></div>
+                                </div>
+                            </form>
+                            <div class="row">
+                                <div class="col">
+                                    <!-- {% if price %}
+                                        <div class="d-flex justify-content-center align-items-center result-row">
+                                            <h6 class="text-primary" style="margin-top: 5px;">Predicted Price: {{ price }}</h6>
+                                        </div>
+                                    {% endif %} -->
+                                    <div class="row">
+                                        <div class="col">
+                                            {% if price %}
+                                            <div class="d-flex justify-content-center align-items-center result-row">
+                                                <h6 class="text-primary" style="margin-top: 5px;">Predicted Price: {{ price }}</h6>
+                                            </div>
+                                            {% endif %}
+
+                                            {% if form_data %}
+                                            <div class="mt-3 p-3 border rounded bg-light form-row">
+                                                <h6 class="text-secondary">Your Input:</h6>
+                                                <ul class="list-unstyled mb-0">
+                                                <li><strong>Airline:</strong> {{ form_data.airline }}</li>
+                                                <li><strong>Departure City:</strong> {{ form_data.departure_city }}</li>
+                                                <li><strong>Departure Time:</strong> {{ form_data.dep_hour }}:{{ form_data.dep_minute }}</li>
+                                                <li><strong>Arrival City:</strong> {{ form_data.arrival_city }}</li>
+                                                <li><strong>Arrival Time:</strong> {{ form_data.arrival_hour }}:{{ form_data.arrival_minute }}</li>
+                                                <li><strong>Total Stops:</strong> {{ form_data.stops }}</li>
+                                                </ul>
+                                            </div>
+                                            {% endif %}
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="{{ url_for('static', path='assets/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', path='assets/js/disable-same-city.js') }}"></script>
+</body>
+
+</html>
