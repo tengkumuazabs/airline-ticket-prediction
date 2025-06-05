@@ -34,6 +34,6 @@ docker run -d -p 8000:8000 airline-price-app
 - 📝 Departure City & Time
 - 📝 Arrival City & Time
 - 📝 Total Stops
-- 📝 App returns the predicted ticket price based on input data.
+- 📝 App returns the predicted ticket price based on input data
 
 
