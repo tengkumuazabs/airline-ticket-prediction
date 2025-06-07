@@ -28,13 +28,11 @@ templates = Jinja2Templates(directory='templates')
 # home endpoint
 @app.get('/')
 def home(request: Request, response_class=HTMLResponse):
-    # return HTMLResponse(content=open('templates/index.html').read(), status_code=200)
     return templates.TemplateResponse('index.html', {"request": request})
 
 # endpoint for the prediction 
 @app.get('/predict', response_class=HTMLResponse)
 def predict(request: Request):
-    # return HTMLResponse(content=open('static/predict.html').read(), status_code=200)
     return templates.TemplateResponse('predict.html', {'request': request, 'price': None})
 
 @app.post('/predict')
