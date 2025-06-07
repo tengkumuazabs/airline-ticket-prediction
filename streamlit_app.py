@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 from feature_engineering import FeatureEngineer
 
-model = joblib.load('model.joblib')
+model = joblib.load('model.joblib') 
 
 st.set_page_config(page_title="Airline Ticket Predictor", layout="wide")
 
