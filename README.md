@@ -1,16 +1,16 @@
-# ✈️ Airline Ticket Price Prediction (FastAPI)
+# Airline Ticket Price Prediction (FastAPI)
 
 A web-based machine learning app built with **FastAPI** to predict airline ticket prices based on user inputs like airline, route, time, and stops.
 
-## 🔧 Features
+## Features
 
-- 🧠 Real-time ML model predictions  
-- 🖥️ HTML form interface with **Jinja2 templates**  
-- 🗂️ Organized file structure with **static assets**  
-- 📦 Docker support for deployment  
-- 🔐 Environment-based config via `.env`  
+- Real-time ML model predictions  
+- HTML form interface with **Jinja2 templates**  
+- Organized file structure with **static assets**  
+- Docker support for deployment  
+- Environment-based config via `.env`  
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the Repository
 
@@ -29,11 +29,11 @@ docker build -t airline-ticket-prediction-fastapi .
 docker run -d -p 8000:8000 airline-ticket-prediction-fastapi
 ```
 
-## 📊 User Inputs
-- 📝 Airline (e.g., Air India, IndiGo, Jet Airways)
-- 📝 Departure City & Time
-- 📝 Arrival City & Time
-- 📝 Total Stops
-- 📝 App returns the predicted ticket price based on input data
+## User Inputs
+- Airline (e.g., Air India, IndiGo, Jet Airways)
+- Departure City & Time
+- Arrival City & Time
+- Total Stops
+- App returns the predicted ticket price based on input data
 
 
