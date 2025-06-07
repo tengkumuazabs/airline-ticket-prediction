@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 import os
 from dotenv import load_dotenv
-# from feature_engineering import FeatureEngineer
+from feature_engineering import FeatureEngineer
 
 # Load model
 load_dotenv()
