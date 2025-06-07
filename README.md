@@ -47,13 +47,13 @@ docker run -d -p 8000:8000 airline-ticket-prediction-fastapi
 <div style="display: flex; gap: 20px;">
 
   <div>
-    <img src="screenshots/home_page.png" alt="Home Page Form" width="300"/>
-    <p>Home Page Form</p>
+    <p>Home Page</p>
+    <img src="screenshots/home_page.png" alt="Home Page Form" width="200"/>
   </div>
 
   <div>
-    <img src="screenshots/predict_page.png" alt="Prediction Result" width="300"/>
-    <p>Prediction Result Page</p>
+    <p>Prediction Page</p>
+    <img src="screenshots/predict_page.png" alt="Prediction Result" width="200"/>
   </div>
 
 </div>
