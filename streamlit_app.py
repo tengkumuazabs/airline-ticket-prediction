@@ -8,7 +8,8 @@ from dotenv import load_dotenv
 # Load model
 load_dotenv()
 model_path = os.getenv('MODEL_PATH', 'model.joblib')
-model = joblib.load(model_path)
+# model = joblib.load(model_path)
+model = joblib.load('model.joblib')
 
 st.set_page_config(page_title="Airline Ticket Predictor", layout="wide")
 
