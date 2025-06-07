@@ -1,18 +1,24 @@
-# Airline Ticket Price Prediction (FastAPI)
+# Airline Ticket Price Prediction (FastAPI + Streamlit)
 
-A web-based machine learning app built with **FastAPI** to predict airline ticket prices based on user inputs like airline, route, time, and stops.
+This is a machine learning web app built with FastAPI and Streamlit to predict airline ticket prices based on user input such as airline, route, time, and number of stops.
+
+## Live App (Streamlit Version)
+
+Visit the app: [https://airline-ticket-price.streamlit.app/](https://airline-ticket-price.streamlit.app/)
+
+Note: If the app doesn't load right away, it may be inactive. Click the "Reboot" button in the top right to restart it.
 
 ## Features
 
-- Real-time ML model predictions  
-- HTML form interface with **Jinja2 templates**  
-- Organized file structure with **static assets**  
-- Docker support for deployment  
-- Environment-based config via `.env`  
+- Real-time price prediction
+- Simple HTML form with Jinja2 templates (FastAPI)
+- Organized project structure
+- Docker support for deployment
+- Environment-based configuration with `.env`
 
 ## Getting Started
 
-### 1. Clone the Repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/tengkumuazabs/airline-ticket-prediction.git
@@ -29,11 +35,26 @@ docker build -t airline-ticket-prediction-fastapi .
 docker run -d -p 8000:8000 airline-ticket-prediction-fastapi
 ```
 
-## User Inputs
+## Inputs and Output
 - Airline (e.g., Air India, IndiGo, Jet Airways)
 - Departure City & Time
 - Arrival City & Time
 - Total Stops
 - App returns the predicted ticket price based on input data
 
+## Screenshots (FastAPI + HTML Version)
+
+<div style="display: flex; gap: 20px;">
+
+  <div>
+    <img src="screenshots/home_page.png" alt="Home Page Form" width="300"/>
+    <p>Home Page Form</p>
+  </div>
+
+  <div>
+    <img src="screenshots/predict_page.png" alt="Prediction Result" width="300"/>
+    <p>Prediction Result Page</p>
+  </div>
+
+</div>
 
