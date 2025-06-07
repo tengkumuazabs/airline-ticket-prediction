@@ -1,14 +1,8 @@
 import streamlit as st
 import pandas as pd
 import joblib
-import os
-from dotenv import load_dotenv
 from feature_engineering import FeatureEngineer
 
-# Load model
-load_dotenv()
-model_path = os.getenv('MODEL_PATH', 'model.joblib')
-# model = joblib.load(model_path)
 model = joblib.load('model.joblib')
 
 st.set_page_config(page_title="Airline Ticket Predictor", layout="wide")
