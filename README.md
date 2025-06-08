@@ -4,9 +4,9 @@ This is a machine learning web app built with FastAPI and Streamlit to predict a
 
 ## Live App (Streamlit Version)
 
-Visit the app: [https://airline-ticket-price.streamlit.app/](https://airline-ticket-price.streamlit.app/)
+Visit the app: [https://airline-ticket-price.streamlit.app](https://airline-ticket-price.streamlit.app)
 
-Note: If the app doesn't load right away, it may be inactive. Click the "Reboot" button in the top right to restart it.
+Note: If the app doesn't load right away, it may be inactive. Click the "Reboot" button to restart it.
 
 ## Features
 
