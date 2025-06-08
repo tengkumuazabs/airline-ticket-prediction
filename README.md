@@ -42,19 +42,12 @@ docker run -d -p 8000:8000 airline-ticket-prediction-fastapi
 - Total Stops
 - App returns the predicted ticket price based on input data
 
-## Screenshots (FastAPI + HTML Version)
+## Screenshots (FastAPI HTML Version)
 
-<div style="display: flex; gap: 20px;">
+### Home Page Form
 
-  <div>
-    <p>Home Page</p>
-    <img src="screenshots/home_page.png" alt="Home Page Form" width="200"/>
-  </div>
+<img src="screenshots/home_page.png" alt="Home Page Form" width="500"/>
 
-  <div>
-    <p>Prediction Page</p>
-    <img src="screenshots/predict_page.png" alt="Prediction Result" width="200"/>
-  </div>
+### Prediction Result Page
 
-</div>
-
+<img src="screenshots/predict_page.png" alt="Prediction Result" width="500"/>
